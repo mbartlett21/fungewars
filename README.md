@@ -32,17 +32,17 @@ char| stack                         | name       	|op
 spc |( - )							| nop			| 
 !   |(a - !a)						| not			| 
 "   |( - string)					| string 		| pushes cells until it hits another ", then goes back to normal mode
-#   |( - )							| skip			| (x, y) += (dx, dy)
+\#  |( - )							| skip			| (x, y) += (dx, dy)
 $   |(a - )							| drop			| 
 %   |(a b - a%b)					| modulus		| 
 &   |( - )							| 				| 
 '   |( - get(x+dx, y+dy))			| fetch			| (x, y) += (dx, dy)
 (   |( - )							| 				| 
 )   |( - )							| 				| 
-*   |(a b - a*b)					| multiply		| 
-+   |(a b - a+b)					| add			| 
+\*  |(a b - a\*b)					| multiply		| 
+\+  |(a b - a+b)					| add			| 
 ,   |( - )							| 				| 
--   |(a b - a-b)					| subtract		| 
+\-  |(a b - a-b)					| subtract		| 
 .   |( - )							| 				| 
 /   |(a b - a/b)					| divide		| 
 0   |( - 0)							| push 0		| 
@@ -59,7 +59,7 @@ $   |(a - )							| drop			|
 ;   |( - )							| jump			| pretends everything is a nop until it hits another ;
 <   |( - )							| go left		| (dx, dy) = (-1, 0)
 =   |( - )							| 				| 
->   |( - )							| go right		| (dx, dy) = ( 1, 0)
+\>  |( - )							| go right		| (dx, dy) = ( 1, 0)
 ?   |( - )							| go random		| (dx, dy) = (1,0)|(0,1)|(-1,0)|(0,-1)
 @   |( - )							| die			| kills thread
 A   |( - )							| 				| 
