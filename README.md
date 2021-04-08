@@ -32,17 +32,17 @@ char| stack                         | name       	|op
 spc |( - )							| nop			| 
 !   |(a - !a)						| not			| 
 "   |( - string)					| string 		| pushes cells until it hits another ", then goes back to normal mode
-#   |( - )							| skip			| (x, y) += (dx, dy)
+\#   |( - )							| skip			| (x, y) += (dx, dy)
 $   |(a - )							| drop			| 
 %   |(a b - a%b)					| modulus		| 
 &   |( - )							| 				| 
 '   |( - get(x+dx, y+dy))			| fetch			| (x, y) += (dx, dy)
 (   |( - )							| 				| 
 )   |( - )							| 				| 
-*   |(a b - a*b)					| multiply		| 
-+   |(a b - a+b)					| add			| 
+\*   |(a b - a\*b)					| multiply		| 
+\+   |(a b - a+b)					| add			| 
 ,   |( - )							| 				| 
--   |(a b - a-b)					| subtract		| 
+\-   |(a b - a-b)					| subtract		| 
 .   |( - )							| 				| 
 /   |(a b - a/b)					| divide		| 
 0   |( - 0)							| push 0		| 
@@ -59,7 +59,7 @@ $   |(a - )							| drop			|
 ;   |( - )							| jump			| pretends everything is a nop until it hits another ;
 <   |( - )							| go left		| (dx, dy) = (-1, 0)
 =   |( - )							| 				| 
->   |( - )							| go right		| (dx, dy) = ( 1, 0)
+\>   |( - )							| go right		| (dx, dy) = ( 1, 0)
 ?   |( - )							| go random		| (dx, dy) = (1,0)|(0,1)|(-1,0)|(0,-1)
 @   |( - )							| die			| kills thread
 A   |( - )							| 				| 
@@ -88,12 +88,12 @@ W   |( - )							| ccw-cw if		| (dx, dy) = (a > b) ? (dx, dy) = (-dy, dx) : (a <
 X   |( - )							| wall			| (dx, dy) = (-dx, -dy); blocks p, g, j, ", ;
 Y   |( - )							| 				| 
 Z   |( - )							| 				| 
-[   |( - )							| 				| (dx, dy) = (-dy, dx)
-\   |(a b - b a)					| swap			| same as forth SWAP
+\[   |( - )							| 				| (dx, dy) = (-dy, dx)
+\\   |(a b - b a)					| swap			| same as forth SWAP
 ]   |( - )							| 				| (dx, dy) = (dy, -dx)
 ^   |( - )							| 				| (dx, dy) = (0, 1)
 _   |(a - )							| left-right if	| (dx, dy) = a ? (-1, 0) : 1, 0)
-`   |(a b - a>b)					| greater than	| 
+\`   |(a b - a>b)					| greater than	| 
 a   |( - 10)						| push 10		| 
 b   |( - 11)						| push 11		| 
 c   |( - 12)						| push 12		| 
@@ -103,7 +103,7 @@ f   |( - 15)						| push 15		|
 g   |(y x - get(x,y)				| get			| 
 h   |( - )							| 				| 
 i   |( - )							| 				| 
-j   |(a - )							| jump			| (x, y) += (dx, dy)*(a-1)
+j   |(a - )							| jump			| (x, y) += (dx, dy)\*(a-1)
 k   |(n - )							| iterate		| (dx, dy) = (0, 0) but gets put back after n cycles
 l   |( - )							| 				| 
 m   |( - )							| 				| 
